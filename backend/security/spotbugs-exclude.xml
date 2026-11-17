@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!--
+      EI_EXPOSE_REP does not apply to this codebase: DTO records wrap immutable
+      collections, JPA entities are managed by Hibernate, and Spring beans hold
+      injected singletons by design. Security-relevant detectors stay enabled.
+    -->
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/>
+    </Match>
+</FindBugsFilter>

@@ -1,0 +1,26 @@
+# Backend
+backend/target/
+backend/data/
+# H2 database files (contain password hashes and refresh tokens)
+data/
+*.mv.db
+*.trace.db
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Security scan output
+security/dast/reports/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

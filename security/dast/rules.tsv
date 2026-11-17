@@ -1,0 +1,8 @@
+# ZAP baseline rules
+# Format: rule_id<TAB>action<TAB>url_regex
+# 10096 - timestamp disclosure (JSON responses include ISO timestamps by design)
+10096	IGNORE	.*
+# 10015 - cache control (API responses are intentionally marked no-store)
+10015	IGNORE	.*
+# 10063 - cross-domain policy (CORS is restricted to the configured frontend origin)
+10063	IGNORE	.*

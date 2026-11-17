@@ -1,0 +1,25 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:bookstore-test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+app:
+  jwt:
+    secret: test-only-secret-test-only-secret-test-only-secret-0123456789
+    access-token-ttl-seconds: 900
+    refresh-token-ttl-seconds: 604800
+  security:
+    cookie-secure: false
+    auth-rate-limit-per-minute: 1000
+  cache:
+    books-ttl-seconds: 60
+
+logging:
+  level:
+    root: WARN
+    com.bookstore: WARN
